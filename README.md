@@ -73,7 +73,9 @@ Proje içinde postman klasöründen resimlere bakabilirsiniz.
 `
 
 --- ProductService
+
 - http://localhost:8080/api/products/create
+
   
 `
 {
@@ -83,7 +85,9 @@ Proje içinde postman klasöründen resimlere bakabilirsiniz.
 }
 `
 
+
 --- CartService
+
 - http://localhost:8080/api/cart/add
   
 `
@@ -92,18 +96,21 @@ Proje içinde postman klasöründen resimlere bakabilirsiniz.
     "quantity":5 }
 `
 
+
 - http://localhost:8080/api/cart/remove
   
 `
-
   {  "cartId":,
     "productId":13,
     "quantity": 2 }
 `
 
+
 -  http://localhost:8080/api/cart/empyt/{cartId}
 
+
 --- OrderService
+
 
 - http://localhost:8080/api/orders/placeOrder/{cartId}
 
