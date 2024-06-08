@@ -59,3 +59,14 @@ spring.datasource.password=kendi-password
 
 # Swagger
 http://localhost:8080/swagger-ui/index.html#/
+
+
+# Postman 
+
+curl --location --request POST 'https://api.example.com/api/v1/resources' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer your-access-token' \
+--data-raw '{
+    "name": "Yeni Kaynak",
+    "description": "Bu bir örnek açıklamadır."
+}'
