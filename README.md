@@ -99,11 +99,11 @@ Proje içinde postman klasöründen resimlere bakabilirsiniz.
 - http://localhost:8080/api/cart/remove
   
 `
-{
+
     "cartId":,
     "productId":13,
     "quantity": 2
-}
+
 `
 
 -  http://localhost:8080/api/cart/empyt/{cartId}
