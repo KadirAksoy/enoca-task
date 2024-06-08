@@ -20,7 +20,7 @@ OrderService: Sipariş verme, kullanıcının tüm siparişlerini listeleme ve s
 - Docker
 - Mapper
 
-- ### Önkoşullar
+### Önkoşullar
 
 Projenin çalıştırılması için aşağıdaki yazılımların yüklü olması gerekmektedir:
 
