@@ -52,7 +52,6 @@ Databse için gerekli yapılandırmalar:
 
 `
 spring.datasource.username=kendi-username
-
 spring.datasource.password=kendi-password
 `
 
