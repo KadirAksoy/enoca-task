@@ -61,12 +61,48 @@ spring.datasource.password=kendi-password
 http://localhost:8080/swagger-ui/index.html#/
 
 
-# Postman 
 
-curl --location --request POST 'https://api.example.com/api/v1/resources' \
---header 'Content-Type: application/json' \
---header 'Authorization: Bearer your-access-token' \
---data-raw '{
-    "name": "Yeni Kaynak",
-    "description": "Bu bir örnek açıklamadır."
-}'
+# Postman işlemleri
+
+## Post işlemleri için örnekler
+
+--- CustomerService
+- http://localhost:8080/api/customers/create
+{
+    "name":"enoca",
+    "email":"kadir@aksoy.com"
+}
+
+--- ProductService
+- http://localhost:8080/api/products/create
+{
+    "name":" televizyon",
+    "price": 50000,
+    "stock":5
+}
+
+--- CartService
+- http://localhost:8080/api/cart/add
+{
+    "cartId":2,
+    "productId":13,
+    "quantity":5
+
+}
+
+- http://localhost:8080/api/cart/remove
+{
+    "cartId":,
+    "productId":13,
+    "quantity": 2
+}
+
+-  http://localhost:8080/api/cart/empyt/{cartId}
+
+--- OrderService
+
+- http://localhost:8080/api/orders/placeOrder/{cartId}
+
+
+
+
