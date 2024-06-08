@@ -87,22 +87,18 @@ Proje içinde postman klasöründen resimlere bakabilirsiniz.
 - http://localhost:8080/api/cart/add
   
 `
-{
-    "cartId":2,
+{  "cartId":2,
     "productId":13,
-    "quantity":5
-
-}
+    "quantity":5 }
 `
 
 - http://localhost:8080/api/cart/remove
   
 `
 
-    "cartId":,
+  {  "cartId":,
     "productId":13,
-    "quantity": 2
-
+    "quantity": 2 }
 `
 
 -  http://localhost:8080/api/cart/empyt/{cartId}
