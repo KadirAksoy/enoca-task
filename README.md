@@ -58,7 +58,7 @@ spring.datasource.password=kendi-password
 
 
 # Postman işlemleri
-Proje içinde postman klasöründen resimlere bakabilirsiniz.
+Proje içindeki postman klasöründen resimlere bakabilirsiniz.
 
 ## Post işlemleri için örnekler
 
