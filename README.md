@@ -57,12 +57,9 @@ spring.datasource.password=kendi-password
 `
 
 
-# Swagger
-http://localhost:8080/swagger-ui/index.html#/
-
-
 
 # Postman işlemleri
+Proje içinde postman klasöründen resimlere bakabilirsiniz.
 
 ## Post işlemleri için örnekler
 
@@ -104,5 +101,16 @@ http://localhost:8080/swagger-ui/index.html#/
 - http://localhost:8080/api/orders/placeOrder/{cartId}
 
 
+
+# Swagger
+http://localhost:8080/swagger-ui/index.html#/
+
+![cart-controller](https://github.com/KadirAksoy/enoca-task/assets/90133005/36199218-2030-4ad2-9ab5-3acc21c4cb30)
+
+![customer-controller](https://github.com/KadirAksoy/enoca-task/assets/90133005/4aef8bda-6852-4a17-9b47-63cccbb5a088)
+
+![order-controller](https://github.com/KadirAksoy/enoca-task/assets/90133005/1d156fd6-b48b-4567-b3b2-5db8e33b6848)
+
+![product-controller](https://github.com/KadirAksoy/enoca-task/assets/90133005/8b3dd465-4468-4e05-ba86-14c750095e8b)
 
 
