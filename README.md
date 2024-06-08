@@ -74,11 +74,12 @@ Proje içinde postman klasöründen resimlere bakabilirsiniz.
 --- ProductService
 - http://localhost:8080/api/products/create
   
-{
+`{
     "name":" televizyon",
     "price": 50000,
     "stock":5
 }
+`
 
 --- CartService
 - http://localhost:8080/api/cart/add
