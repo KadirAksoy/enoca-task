@@ -66,20 +66,20 @@ Proje içinde postman klasöründen resimlere bakabilirsiniz.
 --- CustomerService
 - http://localhost:8080/api/customers/create
   
-`{
+`
+{
     "name":"enoca",
-    
     "email":"kadir@aksoy.com"
-}`
+}
+`
 
 --- ProductService
 - http://localhost:8080/api/products/create
   
-`{
+`
+{
     "name":" televizyon",
-    
     "price": 50000,
-    
     "stock":5
 }
 `
@@ -87,24 +87,24 @@ Proje içinde postman klasöründen resimlere bakabilirsiniz.
 --- CartService
 - http://localhost:8080/api/cart/add
   
-`{
+`
+{
     "cartId":2,
-    
     "productId":13,
-    
     "quantity":5
 
-}`
+}
+`
 
 - http://localhost:8080/api/cart/remove
   
-`{
+`
+{
     "cartId":,
-    
     "productId":13,
-    
     "quantity": 2
-}`
+}
+`
 
 -  http://localhost:8080/api/cart/empyt/{cartId}
 
