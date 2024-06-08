@@ -17,15 +17,41 @@ OrderService: Sipariş verme, kullanıcının tüm siparişlerini listeleme ve s
 - Docker
 - Mapper
 
+- ### Önkoşullar
+
+Projenin çalıştırılması için aşağıdaki yazılımların yüklü olması gerekmektedir:
+
+- Docker
+- Maven
+- Java
+- MySQL
+
+
 # Yapılandırmalar
 Uygulama Başlatılmadan önce application.properties dosyasından database ayarları yapılmalıdır.
 
+Eğer cihazda MySQL var ise " enocadb " adında bir database yaratıp aşağıdaki kodu çalıştırmak ve database ayarlarını yapmak yeterlidir.
+
+```
+cd enoca-task
+mvn clean install
+mvn spring-boot:run
+```
+
+
+Eğer MySQL yok ise gerekli yapıları docker-compose.yml dosyası ile başlatın:
+
+```
+docker-compose up -d
+```
+
+Databse için gerekli yapılandırmalar:
 
 `
-spring.mail.username=email-adress
+spring.datasource.username=kendi-username
+spring.datasource.password=kendi-password
 `
 
-`
-spring.mail.password=app-password
-`
 
+# Swagger
+http://localhost:8080/swagger-ui/index.html#/
