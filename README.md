@@ -67,10 +67,8 @@ Proje içinde postman klasöründen resimlere bakabilirsiniz.
 - http://localhost:8080/api/customers/create
   
 `
-{
-    "name":"enoca",
-    "email":"kadir@aksoy.com"
-}
+{   "name":"enoca",
+    "email":"kadir@aksoy.com" }
 `
 
 --- ProductService
