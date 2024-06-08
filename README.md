@@ -4,8 +4,11 @@ Bu projede Kullanıcı, sepetine ürün ekleme,çıkarma,artırma işlemlerini g
 
 ## Servisler
 CustomerService: Bir kullanıcı ve kullanıcıya bir sepet(cart) yaratır.
+
 ProductService: Ürün ekleme,silme,güncelleme,listeleme gibi işlemleri yapar.
+
 CartService: Sepete ürün ekleme,silme sepeti güncelleme ve sepetin içindekilerini silme işlemini yapar.
+
 OrderService: Sipariş verme, kullanıcının tüm siparişlerini listeleme ve sipariş koduna göre (code) siparişi getirme işlemlerini yapar.
 
 
