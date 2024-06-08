@@ -47,7 +47,7 @@ public class CartService {
                 .orElseThrow(() -> new ProductNotFoundException(cartItemRequest.getProductId()));
 
         if (product.getStock() < cartItemRequest.getQuantity()) {
-            throw new RuntimeException("Not enough stock for product");
+            throw new RuntimeException("Ürün için yeterli stok yok");
         }
 
         CartItem existingCartItem = cart.getItems().stream()
@@ -71,6 +71,7 @@ public class CartService {
 
         updateCartTotalPrice(cart);
         cartRepository.save(cart);
+        log.info("Urun eklendi: " + cartItemRequest.getProductId());
         return cartConverter.toCartDTO(cart);
     }
     @Transactional
@@ -93,13 +94,14 @@ public class CartService {
 
         updateCartTotalPrice(cart);
         cartRepository.save(cart);
+        log.info("Urun silindi: " + cartItemRequest.getProductId());
         return cartConverter.toCartDTO(cart);
     }
 
 
     @Transactional
     public CartDto emptyCart(Long cartId) {
-        Cart cart = cartRepository.findById(cartId).orElseThrow(() -> new RuntimeException("Cart not found"));
+        Cart cart = cartRepository.findById(cartId).orElseThrow(() -> new CartNotFoundException("Cart bulunamadı."));
         cartItemRepository.deleteAll(cart.getItems());
         cart.getItems().clear();
         cart.setTotalPrice(0.0);

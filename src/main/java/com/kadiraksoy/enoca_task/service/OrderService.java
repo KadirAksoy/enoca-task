@@ -6,6 +6,7 @@ import com.kadiraksoy.enoca_task.entity.Cart;
 import com.kadiraksoy.enoca_task.entity.Order;
 import com.kadiraksoy.enoca_task.entity.OrderItem;
 import com.kadiraksoy.enoca_task.entity.Product;
+import com.kadiraksoy.enoca_task.exception.CartNotFoundException;
 import com.kadiraksoy.enoca_task.exception.OrderNotFoundException;
 import com.kadiraksoy.enoca_task.mapper.OrderConverter;
 import com.kadiraksoy.enoca_task.repository.*;
@@ -48,12 +49,12 @@ public class OrderService {
 
     @Transactional
     public OrderDto placeOrder(Long cartId) {
-        Cart cart = cartRepository.findById(cartId).orElseThrow(() -> new RuntimeException("Cart not found"));
+        Cart cart = cartRepository.findById(cartId).orElseThrow(() -> new CartNotFoundException("Cart bulunamadı"));
         Order order = new Order();
         order.setCustomer(cart.getCustomer());
         order.setTotalPrice(cart.getTotalPrice());
 
-        // Sipariş öğelerini oluştur ve ekle
+
         List<OrderItem> orderItems = cart.getItems().stream().map(cartItem -> {
             Product product = cartItem.getProduct();
             if (product.getStock() < cartItem.getQuantity()) {
@@ -64,9 +65,9 @@ public class OrderService {
             orderItem.setOrder(order);
             orderItem.setProduct(product);
             orderItem.setQuantity(cartItem.getQuantity());
-            orderItem.setPrice(cartItem.getPrice());  // Satın alma anındaki fiyat
+            orderItem.setPrice(cartItem.getPrice());
 
-            // Stok azaltma
+
             product.setStock(product.getStock() - cartItem.getQuantity());
             productRepository.save(product);
 
@@ -78,7 +79,7 @@ public class OrderService {
         order.setCode(code);
         orderRepository.save(order);
 
-        // Sepeti boşalt
+
         cartItemRepository.deleteAll(cart.getItems());
         cart.getItems().clear();
         cart.setTotalPrice(0.0);
