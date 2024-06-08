@@ -68,7 +68,8 @@ Proje içinde postman klasöründen resimlere bakabilirsiniz.
   
 `
 {   "name":"enoca",
-    "email":"kadir@aksoy.com" }
+    "email":"kadir@aksoy.com" 
+    }
 `
 
 --- ProductService
